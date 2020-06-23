@@ -1,7 +1,29 @@
-.Chat
-  .Chat__Header
-  .Chat__Main
-  .Chat__Message-form
+.Main_chat
+  .Main_chat__Header
+    .header-text
+      .header-test 
+        test 
+        .header-test-member
+          Member:masa 
+      .header-edit
+        = link_to "https://www.facebook.com/", class: "header-edit" do
+          Edit
+    
+  .Main_chat__Main
+    .user1
+      .user1-name
+        masa
+      .user1-createdup
+        2020/06/23(Tue) 17:40:45
+    .user1-text
+      おはよう！
+    .user2
+      .user2-name
+        masa
+      .user2-createdup
+        2020/06/23(Tue) 18:00:00
+    .user2-text
+      今日は夜から雨
 
-
-
+  .Main_chat__Message_form
+    %input.typing {placeholder => "type a message",type => "text",:value => send}/

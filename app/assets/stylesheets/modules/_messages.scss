@@ -11,7 +11,7 @@
   height:100vh;
   font-weight:bold;
   box-sizing: border-box;
-  .Side_bar__Name{
+  &__Name{
     background-color:#253141;
     height:100px;
     display: flex;
@@ -25,11 +25,11 @@
       display: flex;
       align-items: center;
       justify-content: around-between;
-      .Top_items__Name{
+      &__Name{
         height: 20px;
         width: 200px;
       }
-      .Top_items__Icons{
+      &__Icons{
         height: 20px;
         width: 60px;
         display: flex;
@@ -37,10 +37,10 @@
         justify-content: flex-end;
         color: #ffffff;
         text-decoration: none;
-        .Top_items__Icons_edit{
+        &_edit{
          color: #ffffff;
         }
-        .Top_items__Icons_cog{
+        &_cog{
           color: #ffffff;
           margin-left:5px;
         }
@@ -106,13 +106,13 @@
         display:flex;
         justify-content: flex-left;
         padding-top: 35px;
-        .user1-name{
+        &-name{
           font-size: 16px;
           color: #333333;
           font-weight: bold;
           padding-left: 40px;
         }
-        .user1-createdup{
+        &-createdup{
           font-size: 12px;
           color: #999999;
           padding-left: 10px;
@@ -121,7 +121,7 @@
       .user1-text{
         font-size: 14px;
         color: #434A54;
-        padding: 12px 0 46px 40px;
+        padding: 12px 0px 46px 40px;
       }
     }
   }

@@ -1,0 +1,14 @@
+.Side_bar
+  .Side_bar__Name
+    .Top_items
+      .Top_items__Name Masa
+      .Top_items__Icons
+        = link_to "https://www.facebook.com/", class: "Top_items__Icons_edit" do
+          = icon('far', 'edit')
+        = link_to "https://twitter.com/", class: "Top_items__Icons_cog" do
+          = icon('fas', 'cog')
+
+      
+  .Side_bar__Group_list
+    %p.group-name techcamp
+    %p.tweet まだメッセージがありません

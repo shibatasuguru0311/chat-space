@@ -2,35 +2,27 @@
   .Main_chat__Header
     .header-text
       .header-test 
-        test 
+        = @group.name
         .header-member
-          Member:masa 
-      .header-edit
-        = link_to "https://www.facebook.com/", class: "header-edit" do
-          Edit
+          Member :
+          - @group.users.each do |user_name|
+            = user_name.name
+    .header-edit
+      = link_to edit_group_path(@group), class: "header-edit" do
+        Edit
+    
     
   .Main_chat__Main
-    .user1
-      .user1-name
-        masa
-      .user1-createdup
-        2020/06/23(Tue) 17:40:45
-    .user1-text
-      おはよう！
-    .user1
-      .user1-name
-        masa
-      .user1-created-up
-        2020/06/23(Tue) 18:00:00
-    .user1-text
-      今日は夜から雨
+    = render @messages
+
 
   .Main_chat__Message_form
-    .form
-      %form.new-message
-        .input-box
-          %input{type:"text",class:"input-box__text",placeholder:"type a message"}
-          %label{class:"input-box__image",}
-            =icon('fas','image')
-            %input{type:"file",class: "input-box__image__file"}
-        %input{type: "submit", class: "submit-btn",value:"Send"}
+    = form_with model: [@group, @message], html: {class: "form"}, local: true do |f|
+      .input-box
+        = f.text_field :body, class: "input-box__text", placeholder: "type a message"
+        = f.label :image, class: 'input-box__image' do
+          =icon('fas','image')
+          = f.file_field :image, class: 'input-box__image__file' 
+      = f.submit "Send", class: "submit-btn" 
+
+

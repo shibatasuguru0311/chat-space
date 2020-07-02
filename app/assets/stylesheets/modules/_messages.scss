@@ -105,7 +105,9 @@
     height: calc(100vh - 190px);
     overflow: scroll;
 
-
+      .Message__content{
+        padding-left: 40px;
+      }
       .user1{
         display:flex;
         justify-content: flex-left;

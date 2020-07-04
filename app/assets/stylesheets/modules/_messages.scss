@@ -9,7 +9,6 @@
 .Side_bar{
   width:300px;
   height:100vh;
-  font-weight:bold;
   box-sizing: border-box;
   &__Name{
     background-color:#253141;
@@ -28,6 +27,8 @@
       &__Name{
         height: 20px;
         width: 200px;
+        color: white;
+        font-weight:bold;
       }
       &__Icons{
         height: 20px;
@@ -95,9 +96,14 @@
       }
   }
   .header-edit{
+    margin:35px 20px ;
+    a.header-edit{
     color: #38aef0;
     font-size: 16px;
-    padding: 28px 60px 28px 20px;
+    padding: 11px 20px;
+    border: 1px solid #38aef0;
+    text-decoration: none;
+    }
   }
   .Main_chat__Main{
     background-color:#fafafa;

@@ -1,3 +1,5 @@
+http://18.180.211.4/
+
 # chat-space  DB設計
 ## usersテーブル
 | Column | Type | Options |
